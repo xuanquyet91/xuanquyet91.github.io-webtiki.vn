@@ -1,0 +1,39 @@
+.bannerSalesOne {
+    width: $width-PC;
+    margin: auto;
+    background-color: $background-PC;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 16px;
+    padding: 20px 0;
+    .bannerLeft,
+    .bannerRight {
+        height: 150px;
+        width: 204px;
+    }
+    .bannerCenter {
+        height: 150px;
+        width: 800px;
+    }
+    .bannerLeft,
+    .bannerRight,
+    .bannerCenter {
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+        }
+    }
+    .bannerCenter:hover {
+        cursor: pointer;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 10px;
+    }
+    .bannerLeft:hover {
+        cursor: pointer;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 10px;
+    }
+    .bannerRight:hover {
+        cursor: pointer;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 10px;
+    }
+}

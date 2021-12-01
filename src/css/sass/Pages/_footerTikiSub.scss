@@ -1,0 +1,58 @@
+.footerTikiSub {
+    &-top {
+        width: $width-PC;
+        margin: 20px auto;
+        border-bottom: 1px solid #cdcdd4;
+        h4 {
+            color: #38383d;
+            font-weight: 600;
+            font-size: 18px;
+            padding-bottom: 20px;
+        }
+        p {
+            display: block;
+            font-size: 14px;
+            color: #808089;
+            padding: 0 0 11px;
+        }
+        h5 {
+            display: block;
+            font-size: 16px;
+            color: #525257b3;
+            padding: 15px 0 15px;
+            font-weight: 600;
+        }
+    }
+    &-bottom {
+        width: $width-PC;
+        margin: 20px auto;
+        .footerSub-title {
+            h4 {
+                color: #38383d;
+                font-weight: 600;
+                font-size: 18px;
+                padding-bottom: 20px;
+            }
+        }
+        .footerSub-body {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            .footerSub-Item {
+                p {
+                    display: block;
+                    font-size: 14px;
+                    color: #808089;
+                    padding: 0 0 11px;
+                }
+                h5 {
+                    display: block;
+                    font-size: 16px;
+                    color: #525257b3;
+                    padding: 15px 0 15px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

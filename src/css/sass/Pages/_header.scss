@@ -1,0 +1,135 @@
+.style__header {
+    background-color: $primary-blue;
+    .header__top {
+        width: $width-PC;
+        padding: 18px 15px 8px;
+        margin: 0 auto;
+        display: flex;
+        .menu__left {
+            width: 952px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            .menu-logo {
+                padding: 18px 0 8px;
+                img {
+                    height: 40px;
+                    width: 60px;
+                }
+            }
+            .formSearch {
+                margin-left: auto;
+                display: flex;
+                padding: 18px 0 8px;
+                .formSearch__Input {
+                    width: 626px;
+                    height: 40px;
+                    border: 0;
+                    padding: 0 13px;
+                    box-sizing: border-box;
+                }
+                button {
+                    height: 40px;
+                    width: 120px;
+                    border: none;
+                    background-color: $color-button;
+                    color: $color-primary-white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    img {
+                        height: 20px;
+                    }
+                }
+            }
+        }
+        .menu__right {
+            font-size: 12px;
+            display: flex;
+            .user-account {
+                display: flex;
+                color: $color-primary-white;
+                padding: 9px 5px 0px 10px;
+                .cart-item {
+                    display: flex;
+                    cursor: pointer;
+                    img {
+                        height: 32px;
+                    }
+                    .user-style {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 0 10px;
+                        .user-style__login {
+                            padding: 0 2px 7px;
+                            display: flex;
+                        }
+                        .account-label {
+                            display: flex;
+                            img {
+                                height: 16px;
+                            }
+                        }
+                    }
+                }
+                .cart-shopping {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: end;
+                    cursor: pointer;
+                    img {
+                        height: 32px;
+                        padding: 0 8px 0 20px;
+                    }
+                    span {
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+    .header__bottom {
+        width: $width-PC;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0 15px;
+        .logo__bottom {
+            display: flex;
+            img {
+                height: 12px;
+                width: 83px;
+                font-size: 14px;
+            }
+        }
+        .keyWords__food {
+            margin-left: -31.5%;
+            a {
+                color: #fff;
+                text-decoration: none;
+                padding: 0 7px;
+                font-size: 13px;
+            }
+            a:hover {
+                cursor: pointer;
+                background: $color-primary-white;
+                color: $primary-blue;
+            }
+        }
+        .tiki-seller {
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            padding: 3px;
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+    }
+    .header__support {
+        position: fixed;
+        bottom: 80px;
+        right: 10px;
+        z-index: 11;
+    }
+}

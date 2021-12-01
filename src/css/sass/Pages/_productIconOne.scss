@@ -1,0 +1,33 @@
+.productIconOne {
+    width: $width-PC;
+    height: 100px;
+    margin: auto;
+    background-color: $color-primary-white;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    padding: 20px 0;
+    .bannerTenCol:hover img {
+        cursor: pointer;
+        transform: scale(1.2);
+        transition: .5s;
+    }
+    .bannerTenCol {
+        display: grid;
+        justify-content: center;
+        cursor: pointer;
+        img {
+            width: 48px;
+            height: 48px;
+            padding-left: 12px;
+        }
+        span {
+            color: #0d5cb6;
+            font-size: 15px;
+            margin: auto;
+            width: 70px;
+            line-height: 1.3;
+            padding: 20px 0;
+            text-align: center;
+        }
+    }
+}

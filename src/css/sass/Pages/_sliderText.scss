@@ -1,0 +1,20 @@
+.slider__header {
+    width: $width-PC;
+    margin: auto;
+
+        .styleCateName {
+            display: inline-block;
+            text-decoration: none;
+            padding: 8px 8px;
+            margin: 8px 0;
+            color: #000;
+        }
+        .styleCateName:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+        .slick-prev:before, .slick-next:before {
+            color:#a19292 !important;
+        }
+
+}

@@ -1,0 +1,23 @@
+.bannerSalesFour {
+    width: $width-PC;
+    margin: auto;
+    background-color: $background-PC;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 29px;
+    padding: 20px 0;
+    .bannerThirdCol:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        transition: .5s;
+    }
+    .bannerThirdCol {
+        width: 394px;
+        height: 151px;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10%;
+        }
+    }
+}

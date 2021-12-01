@@ -1,0 +1,82 @@
+.footerTiki {
+    &-top {
+        width: $width-PC;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        margin: 20px auto;
+        border-bottom: 1px solid #cdcdd4;
+        .footerInfo {
+            &-title {
+                h4 {
+                    color: #38383d;
+                    font-weight: 600;
+                    font-size: 18px;
+                    padding-bottom: 20px;
+                }
+            }
+            &-desc {
+                .socials-list {
+                    a {
+                        display: inline;
+                    }
+                    i {
+                        font-size: 28px;
+                        padding-right: 8px;
+                        padding-bottom: 10px;
+                    }
+                }
+                h4 {
+                    color: #38383d;
+                    font-weight: 600;
+                    font-size: 18px;
+                    padding: 20px 0;
+                }
+                p {
+                    display: block;
+                    font-size: 14px;
+                    color: #808089;
+                    padding: 0 0 11px;
+                }
+                span {
+                    display: inline-block;
+                    font-size: 14px;
+                    color: #808089;
+                }
+                a {
+                    text-decoration: none;
+                    display: block;
+                    font-size: 14px;
+                    color: #808089;
+                    padding: 0 0 11px;
+                }
+                img {
+                    display: inline-block;
+                    height: 32px;
+                    padding-right: 10px px;
+                }
+                .img-left {
+                    display: inline-block;
+                    width: 108px;
+                    padding-left: 5px;
+                }
+                a:first-child {
+                    padding-bottom: 0;
+                }
+                a:last-child {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    &-bottom {
+        width: $width-PC;
+        margin: 20px auto;
+        border-bottom: 1px solid #cdcdd4;
+        p {
+            display: block;
+            font-size: 14px;
+            color: #808089;
+            padding: 0 0 11px;
+        }
+    }
+}

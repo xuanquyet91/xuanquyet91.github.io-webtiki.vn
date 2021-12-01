@@ -1,0 +1,54 @@
+.container {
+    background-color: #f5f5fa;
+    .couponTiki {
+        width: $width-PC;
+        margin: auto;
+        padding: 15px 0;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 10px;
+        .sliderCoupon {
+            position: relative;
+            width: 824px;
+            
+            img:hover {
+                cursor: pointer;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 10px;
+            }
+            img {
+                height: 274px;
+                width: 824px;
+            }
+
+            }
+            .slick-prev:before, .slick-next:before {
+                font-family: monospace;
+                font-size: 24px;
+                line-height: 1;
+                background: #00aefd;
+                // opacity: 0.3;
+                font-weight: bold;
+                padding: 5px 15px;
+                position: absolute;
+                transform: translateY(-8px);
+            }
+
+            .slick-prev:before{
+                transform: translateX(-31px);
+            }
+            .slick-next:before{
+                transform: translateX(-12px);
+            }
+
+        }
+        .bookClubCoupon {
+            img {
+                height: 274px;
+                width: 408px;
+            }
+            img:hover {
+                cursor: pointer;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 10px;
+            }
+        }
+    }

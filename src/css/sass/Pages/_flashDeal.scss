@@ -1,0 +1,113 @@
+.flashDeal {
+    width: $width-PC;
+    margin: auto;
+    .flashDeal__header {
+        background-color: $color-primary-white;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        border-bottom: 1px solid #413a3a31;
+        .flashDeal__toDay {
+            img:nth-child(2) {
+                font-size: 24px;
+                transition: 1s;
+                transform: translateY(-10px) scale(1.4);
+                animation: flashScale .7s linear infinite;
+            }
+        }
+        .countDownTime {
+            display: flex;
+            align-items: center;
+            span {
+                background-color: #ff424e;
+                color: $color-primary-white;
+                margin-left: 5px;
+                border-radius: 3px;
+                padding: 3px;
+                font-size: 15px;
+                font-weight: 700;
+            }
+        }
+    }
+    .flashDeal__body {
+        background-color: $color-primary-white;
+        padding: 15px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 18px;
+        .picture:hover {
+            cursor: pointer;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 10px;
+        }
+        .picture {
+            position: relative;
+            height: 183px;
+            width: 183px;
+            img:first-child {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+            }
+            img:last-child {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 91px;
+                height: 16px;
+                z-index: 2;
+            }
+        }
+        .price-deals {
+            padding: 15px 5px;
+            .price-total {
+                color: $price;
+                font-size: 16px;
+                font-weight: 700;
+            }
+            .price-discount {
+                color: $price;
+                font-size: 12px;
+                padding: 2px;
+                border-radius: 2px;
+                border: 1px solid $price;
+                background-color: #fff0f1;
+                margin-left: 12px;
+                font-weight: 700;
+            }
+        }
+        .deals__total {
+            position: relative;
+            margin-bottom: 20px;
+            .deals__progress {
+                position: absolute;
+                background-color: red;
+                width: 20px;
+                height: 20px;
+                z-index: 2;
+                border-radius: 50%;
+            }
+            .open-sale {
+                position: absolute;
+                background: rgba(255, 170, 175, 1);
+                color: $color-primary-white;
+                width: 183px;
+                display: flex;
+                justify-content: center;
+                border-radius: 9px;
+                font-size: 14px;
+                padding: 3px;
+            }
+        }
+    }
+}
+
+@keyframes flashScale {
+    from {
+        opacity: 0.2;
+        transform: scale(1.4);
+    }
+    from {
+        opacity: 1;
+        transform: scale(2);
+    }
+}
