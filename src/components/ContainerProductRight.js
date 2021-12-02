@@ -1,6 +1,9 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom';
 
 function ContainerProductRight() {
+    
+    
     return (
         <div className="containerProduct-right">
             <div className="productListTikiSub">
@@ -18,8 +21,10 @@ function ContainerProductRight() {
                 <div className="productListTikiSub-item">
                     <div className="productSub-item">
                     <div className="productSub-picture">
+                    <Link to="/Product-item">
                         <img src="https://salt.tikicdn.com/cache/200x200/ts/product/62/da/6a/75c5fbce2db07166d41ef78210bcce3e.png.webp" alt="" />
                         <img src="https://salt.tikicdn.com/ts/upload/dc/0d/49/ef9dc5d8164bd62b011e54276502b342.png" alt="" />
+                    </Link>
                     </div>
                     <div className="productSub-content">
                         <div className="productSub-titleItem">

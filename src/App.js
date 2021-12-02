@@ -9,6 +9,7 @@ import FooterTiki from "./components/FooterTiki";
 import FooterTikiSub from "./components/FooterTikiSub";
 import Home from "./pages/Home";
 import ProductList from "./pages/ProductList";
+import ProductItem from "./pages/ProductItem";
 
 
 
@@ -19,8 +20,10 @@ function App() {
       <Header></Header>
       <SliderText></SliderText>
       <Routes>
+        {/* <Route path="/" element={<SliderText />} />  */}
         <Route path="/" element={<Home />} /> 
         <Route path="/Product" element={<ProductList />} />
+        <Route path="/Product-item" element={<ProductItem />} />
       </Routes>
       <FooterTiki></FooterTiki>
       <Routes>
