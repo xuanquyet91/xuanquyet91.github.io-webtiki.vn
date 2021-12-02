@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 function Header() {
     return ( 
@@ -7,7 +8,9 @@ function Header() {
             <div className="menu__left">
               <div className="menu-logo">
                 <a href="#" className="style-logo">
+                <Link to="/">
                   <img src="https://salt.tikicdn.com/ts/upload/ae/f5/15/2228f38cf84d1b8451bb49e2c4537081.png" alt="logoTIKI" />
+                </Link>
                 </a>
               </div>
               <div className="formSearch">
@@ -39,15 +42,33 @@ function Header() {
           </div>
           <div className="header__bottom">
             <a className="logo__bottom" href="#">
+            <Link to="/">
               <img src="https://salt.tikicdn.com/ts/upload/e5/1d/22/61ff572362f08ead7f34ce410a4a6f96.png" alt="FreeShip" />
+            </Link>
             </a>
             <div className="keyWords__food">
+            <Link to="/Product">
               <a href="#">Tất cả thịt rau củ</a>
+            </Link>
+            <Link to="/Product">
               <a href="#">thịt</a>
-              <a href="#">hàng đông lạnh</a>
-              <a href="#">trái cây</a>
-              <a href="#">hải sản</a>
-              <a href="#">gạo</a>
+            </Link>
+            <Link to="/Product">
+            <a href="#">hàng đông lạnh</a>
+            </Link>
+            <Link to="/Product">
+            <a href="#">trái cây</a>
+            </Link>
+            <Link to="/Product">
+            <a href="#">hải sản</a>
+            </Link>
+            <Link to="/Product">
+            <a href="#">gạo</a>
+            </Link>
+              
+             
+              
+              
             </div>
             <a className="tiki-seller" href="#">
               <img className="icon" src="https://frontend.tikicdn.com/_desktop-next/static/img/icon-seller.svg" />
@@ -55,8 +76,10 @@ function Header() {
             </a>
           </div>
           <div className="header__support">
-            <a href="#"> <img src="https://cf.shopee.vn/file/f630b99bef39b0226e962ba7d6750e68" alt="" />
-            </a>
+          <Link to="/">
+            <a href="#"> <img src="https://cf.shopee.vn/file/f630b99bef39b0226e962ba7d6750e68" alt="" /></a>
+            </Link>
+            
           </div>
 </header>
 

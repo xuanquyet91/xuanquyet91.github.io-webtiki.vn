@@ -16,10 +16,10 @@ function SliderCoupon() {
             <div className="sliderCoupon">
             <Slider {...settings}>
                 <div className="imageCoupon">
-                <img src="https://salt.tikicdn.com/cache/w1080/ts/banner/0d/ca/c7/6ba8762e4da109128f94cca1a6ecce0d.png.webp" alt="" />
+                <img src="https://salt.tikicdn.com/cache/w1080/ts/banner/90/4e/44/409f5076798441a0dc9394bc01c5391e.png.webp" alt="" />
                 </div>
                 <div className="imageCoupon">
-                <img src="https://salt.tikicdn.com/cache/w1080/ts/banner/b3/9f/9c/a759c5b90b9b1c083147a60d0a0c86ce.png.webp" alt="" />
+                <img src="https://salt.tikicdn.com/cache/w1080/ts/banner/21/9c/20/1d8b61b93be89df93a0ded5cb64a0910.png.webp" alt="" />
                 </div>
                 <div className="imageCoupon">
                 <img src="https://salt.tikicdn.com/cache/w1080/ts/banner/9a/1e/ff/c4feec6276c9a319f763d6a5297c8a53.png.webp" alt="" />
@@ -30,7 +30,7 @@ function SliderCoupon() {
             </Slider>
             </div>
             <div className="bookClubCoupon">
-                <img src="https://salt.tikicdn.com/cache/w400/ts/banner/da/91/87/a4728dc4e17dc3bdd284e36bee7703dc.png.webp" alt="" />
+                <img src="https://salt.tikicdn.com/cache/w1080/ts/banner/c7/02/df/5a228d56de58c3d68d168d6c60ba79d9.jpg.webp" alt="" />
             </div>
         </div>
 
