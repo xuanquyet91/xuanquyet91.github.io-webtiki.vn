@@ -22,13 +22,53 @@
                 margin-left: auto;
                 display: flex;
                 padding: 18px 0 8px;
+
+                position: relative;
                 .formSearch__Input {
                     width: 626px;
                     height: 40px;
                     border: 0;
                     padding: 0 13px;
                     box-sizing: border-box;
+                    outline: none;
+                    &:focus {
+                        border-color: #ff695b;
+                        box-shadow: 0 0 0 2px #ffe0dd;
+                        & + .search-list {
+                          opacity: 1;
+                          visibility: visible;
+                        }
+                      }
                 }
+                .search-list {
+                    position: absolute;
+                    top: 88.5%;
+                    left: 0px;
+                    width: 626px;
+                    background-color: white;
+                    /* padding: 2rem; */
+                    box-shadow: 0 0 10px -2px rgb(238, 233, 233);
+                    /* border-radius: 8px; */
+                     opacity: 0; 
+                    visibility: hidden; 
+                    transition: 0.2s ease;
+                    z-index: 10;
+                    .link-item{
+                        text-decoration: none;
+                    }
+                  }
+                  .search-item {
+                    padding: 15px;
+                    font-size: 14px;
+                    cursor: pointer;
+                    border-radius: inherit;
+                    transition: 0.2s ease;
+                    
+                    &:hover {
+                      color: #ff695b;
+                      background-color: #ffe0dd;
+                    }
+                  }
                 button {
                     height: 40px;
                     width: 120px;
@@ -52,6 +92,10 @@
                 display: flex;
                 color: $color-primary-white;
                 padding: 9px 5px 0px 10px;
+                a{
+                    text-decoration: none;
+                    color: $color-primary-white;
+                }
                 .cart-item {
                     display: flex;
                     cursor: pointer;
@@ -79,11 +123,13 @@
                     flex-direction: row;
                     align-items: end;
                     cursor: pointer;
+                    
                     img {
                         height: 32px;
                         padding: 0 8px 0 20px;
                     }
                     span {
+                        color: $color-primary-white;
                         display: flex;
                     }
                 }
@@ -126,10 +172,5 @@
             background-color: rgba(255, 255, 255, 0.25);
         }
     }
-    .header__support {
-        position: fixed;
-        bottom: 80px;
-        right: 10px;
-        z-index: 11;
-    }
+    
 }

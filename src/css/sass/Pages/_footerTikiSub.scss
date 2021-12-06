@@ -2,7 +2,8 @@
     &-top {
         width: $width-PC;
         margin: 20px auto;
-        border-bottom: 1px solid #cdcdd4;
+        border-top: 1px solid #cdcdd4;
+        padding-top: 20px;
         h4 {
             color: #38383d;
             font-weight: 600;
@@ -26,6 +27,8 @@
     &-bottom {
         width: $width-PC;
         margin: 20px auto;
+        border-top: 1px solid #cdcdd4;
+        padding-top: 20px;
         .footerSub-title {
             h4 {
                 color: #38383d;

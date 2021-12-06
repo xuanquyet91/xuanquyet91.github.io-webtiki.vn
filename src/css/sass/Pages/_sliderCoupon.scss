@@ -21,23 +21,31 @@
             }
 
             }
+            
+            .slick-prev {
+                left: 21.5px;
+                z-index: 10;
+            }
             .slick-prev:before, .slick-next:before {
                 font-family: monospace;
                 font-size: 24px;
                 line-height: 1;
                 background: #00aefd;
-                // opacity: 0.3;
+                
                 font-weight: bold;
                 padding: 5px 15px;
                 position: absolute;
                 transform: translateY(-8px);
             }
-
+            .slick-prev,.slick-next{opacity: 0.3;}
+            .slick-prev:hover,.slick-next:hover{
+                opacity: 1 !important;
+            }
             .slick-prev:before{
                 transform: translateX(-31px);
             }
             .slick-next:before{
-                transform: translateX(-12px);
+                transform: translateX(-58px);
             }
 
         }

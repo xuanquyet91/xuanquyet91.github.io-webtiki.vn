@@ -9,17 +9,17 @@ function FooterTiki() {
                         <h4>Hỗ trợ khách hàng</h4>
                     </div>
                     <div className="footerInfo-desc">
-                        <span>Hotline: <a href="#"> 1900-6035</a> </span>
+                        <span>Hotline: <a href="true"> 1900-6035</a> </span>
                         <p>(1000 đ/phút, 8-21h kể cả T7, CN)</p>
-                        <a href="#">Các câu hỏi thường gặp</a>
-                        <a href="#">Gửi yêu cầu hỗ trợ</a>
-                        <a href="#">Hướng dẫn đặt hàng</a>
-                        <a href="#">Phương thức vận chuyển</a>
-                        <a href="#">Chính sách đổi trả</a>
-                        <a href="#">Hướng dẫn trả góp</a>
-                        <a href="#">Chính sách hàng nhập khẩu</a>
+                        <a href="true">Các câu hỏi thường gặp</a>
+                        <a href="true">Gửi yêu cầu hỗ trợ</a>
+                        <a href="true">Hướng dẫn đặt hàng</a>
+                        <a href="true">Phương thức vận chuyển</a>
+                        <a href="true">Chính sách đổi trả</a>
+                        <a href="true">Hướng dẫn trả góp</a>
+                        <a href="true">Chính sách hàng nhập khẩu</a>
                         <span>Hỗ trợ khách hàng:</span>
-                        <a href="#"> hotro@tiki.vn</a>
+                        <a href="true"> hotro@tiki.vn</a>
                     </div>
                     </div>
                     <div className="footerInfo">
@@ -28,13 +28,13 @@ function FooterTiki() {
                     </div>
                     <div className="footerInfo-desc">
                         <p>Giới thiệu Tiki</p>
-                        <a href="#">Tuyển dụng</a>
-                        <a href="#">Chính sách bảo mật thanh toán</a>
-                        <a href="#">Chính sách bảo mật thông tin cá nhân</a>
-                        <a href="#">Chính sách giải quyết khiếu nại</a>
-                        <a href="#">Điều khoản sử dụng</a>
-                        <a href="#">Giới thiệu Tiki Xu</a>
-                        <a href="#">Bán hàng doanh nghiệp</a>
+                        <a href="true">Tuyển dụng</a>
+                        <a href="true">Chính sách bảo mật thanh toán</a>
+                        <a href="true">Chính sách bảo mật thông tin cá nhân</a>
+                        <a href="true">Chính sách giải quyết khiếu nại</a>
+                        <a href="true">Điều khoản sử dụng</a>
+                        <a href="true">Giới thiệu Tiki Xu</a>
+                        <a href="true">Bán hàng doanh nghiệp</a>
                     </div>
                     </div>
                     <div className="footerInfo">
@@ -56,7 +56,7 @@ function FooterTiki() {
                     <div className="footerInfo-desc">
                         <div className="socials-list">
                         <a href><i className="fab fa-cc-visa" style={{color: 'rgb(12, 12, 143)'}} /></a>
-                        <a href="#"><i className="fab fa-cc-paypal" style={{color: 'rgb(64, 64, 243)'}} /></a>
+                        <a href="true"><i className="fab fa-cc-paypal" style={{color: 'rgb(64, 64, 243)'}} /></a>
                         <a href><i className="fab fa-cc-mastercard" style={{color: 'rgb(231, 207, 73)'}} /></a>
                         <a href><i className="fab fa-cc-jcb" style={{color: 'rgb(20, 107, 59)'}} /></a>
                         <a href><i className="fab fa-cc-discover" style={{color: 'rgb(143, 12, 56)'}} /></a>

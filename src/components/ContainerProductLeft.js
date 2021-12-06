@@ -3,42 +3,44 @@ import React from 'react'
 function ContainerProductLeft() {
     return (
         <div className="containerProduct-left">
+        <a href="http://localhost:3000/Product-item" class="link-item">
             <div className="listProductOption">
                 <h4>DANH MỤC SẢN PHẨM</h4>
-                <a href="#">Rau Củ Quả</a>
-                <a href="#">Bia, đồ uống</a>
-                <a href="#">Hải Sản</a>
-                <a href="#">Thực Phẩm Chế Biến Sẵn</a>
-                <a href="#">Thực Phẩm Đông Lạnh Khác</a>
-                <a href="#">Traí Cây</a>
-                <a href="#">Điện Lạnh</a>
-                <a href="#">Thiết Bị Số</a> 
-                <a href="#">Điện Thoại </a> 
-                <a href="#">Mẹ &amp; Bé </a> 
-                <a href="#">Làm Đẹp </a> 
-                <a href="#">Gia Dụng </a> 
-                <a href="#">Thời trang nữ </a> 
-                <a href="#">Thời trang nam </a> 
-                <a href="#">Giày nữ </a> 
-                <a href="#">Túi nữ </a> 
-                <a href="#">Giày nam </a> 
-                <a href="#">Túi nam </a> 
-                <a href="#">Balo &amp; Vali </a> 
-                <a href="#">Phụ kiện </a> 
-                <a href="#">Đồng hồ </a> 
-                <a href="#">Thực Phẩm Bổ Dưỡng </a> 
-                <a href="#">Quốc Tế </a> 
-                <a href="#">Voucher </a> 
-                <a href="#">Thực Phẩm Bảo Vệ Sức Khỏe </a> 
-                <a href="#">Thực Phẩm Cho Trẻ Em</a> 
-                <a href="#">Thực Phẩm Cao Cấp </a> 
-                <a href="#">Thể Thao </a> 
-                <a href="#">Máy Ảnh </a>
+                <a href="http://localhost:3000/Product-item">Rau Củ Quả</a>
+                <a href="http://localhost:3000/Product-item">Bia, đồ uống</a>
+                <a href="http://localhost:3000/Product-item">Hải Sản</a>
+                <a href="http://localhost:3000/Product-item">Thực Phẩm Chế Biến Sẵn</a>
+                <a href="http://localhost:3000/Product-item">Thực Phẩm Đông Lạnh Khác</a>
+                <a href="http://localhost:3000/Product-item">Traí Cây</a>
+                <a href="http://localhost:3000/Product-item">Điện Lạnh</a>
+                <a href="http://localhost:3000/Product-item">Thiết Bị Số</a> 
+                <a href="http://localhost:3000/Product-item">Điện Thoại </a> 
+                <a href="http://localhost:3000/Product-item">Mẹ &amp; Bé </a> 
+                <a href="http://localhost:3000/Product-item">Làm Đẹp </a> 
+                <a href="http://localhost:3000/Product-item">Gia Dụng </a> 
+                <a href="http://localhost:3000/Product-item">Thời trang nữ </a> 
+                <a href="http://localhost:3000/Product-item">Thời trang nam </a> 
+                <a href="http://localhost:3000/Product-item">Giày nữ </a> 
+                <a href="http://localhost:3000/Product-item">Túi nữ </a> 
+                <a href="http://localhost:3000/Product-item">Giày nam </a> 
+                <a href="http://localhost:3000/Product-item">Túi nam </a> 
+                <a href="http://localhost:3000/Product-item">Balo &amp; Vali </a> 
+                <a href="http://localhost:3000/Product-item">Phụ kiện </a> 
+                <a href="http://localhost:3000/Product-item">Đồng hồ </a> 
+                <a href="http://localhost:3000/Product-item">Thực Phẩm Bổ Dưỡng </a> 
+                <a href="http://localhost:3000/Product-item">Quốc Tế </a> 
+                <a href="http://localhost:3000/Product-item">Voucher </a> 
+                <a href="http://localhost:3000/Product-item">Thực Phẩm Bảo Vệ Sức Khỏe </a> 
+                <a href="http://localhost:3000/Product-item">Thực Phẩm Cho Trẻ Em</a> 
+                <a href="http://localhost:3000/Product-item">Thực Phẩm Cao Cấp </a> 
+                <a href="http://localhost:3000/Product-item">Thể Thao </a> 
+                <a href="http://localhost:3000/Product-item">Máy Ảnh </a>
             </div>
+            </a>
             <div className="listProductOption">
                 <h4>ĐỊA CHỈ NHẬN HÀNG</h4>
                 <p>Bạn muốn giao hàng tới đâu?</p>
-                <a href="#" style={{color: 'blue'}}>NHẬP ĐỊA CHỈ</a>
+                <a href="true" style={{color: 'blue'}}>NHẬP ĐỊA CHỈ</a>
             </div>
             <div className="listProductOption">
                 <h4>DỊCH VỤ</h4>
@@ -143,7 +145,7 @@ function ContainerProductLeft() {
                 <p>GO! Thái Nguyên</p>
                 </div>
             </div>
-            </div>
+        </div>
 
     )
 }

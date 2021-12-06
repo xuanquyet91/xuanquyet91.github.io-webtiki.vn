@@ -1,7 +1,9 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 function SuggestionsTiki() {
     return (
+        <Link to="/Product" class="link-item">
             <div className="suggestionsTiki">
                 <div className="suggestions-today">
                     <p>Gợi Ý Hôm Nay</p>
@@ -73,6 +75,7 @@ function SuggestionsTiki() {
                     </div>
                 </div>
                 </div>
+            </Link>
 
     )
 }

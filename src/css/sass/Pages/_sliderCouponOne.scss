@@ -2,7 +2,7 @@
     background-color: $color-primary-white;
     width: $width-PC;
     margin: auto;
-    padding: 15px 0;
+    padding: 15px 0 0;
     .slider-title {
         display: flex;
         justify-content: space-between;
@@ -46,11 +46,10 @@
         }
         .slick-dots {
             position: absolute;
-            transform: translate(-50%, 90%);
+            transform: translate(-50%, 10%);
             left: 50%;
             z-index: 2;
-            align-items: center;
-            justify-content: center;
+            
 
             button {
                 cursor: pointer;

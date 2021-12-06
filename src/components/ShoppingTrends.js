@@ -1,7 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 
 function ShoppingTrends() {
     return (
+        <Link to="/Discount-daily" className="link-item">
              <div className="shoppingTrends">
                 <div className="shoppingTrends-title">
                     <div className="trends-left">
@@ -9,7 +12,7 @@ function ShoppingTrends() {
                     <span>Xu Hướng Mua Sắm</span>
                     </div>
                     <div className="trends-right">
-                    <a href="#">XEM THÊM</a>
+                    <a href="true">XEM THÊM</a>
                     </div>
                 </div>
                 <div className="shoppingTrends-body">
@@ -55,7 +58,7 @@ function ShoppingTrends() {
                     </div>
                 </div>
                 </div>
-
+            </Link>
     )
 }
 

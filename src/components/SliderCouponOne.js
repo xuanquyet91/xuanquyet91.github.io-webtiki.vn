@@ -2,6 +2,8 @@ import React from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from 'react-router-dom';
+
 
 function SliderCouponOne() {
     var settings = {
@@ -12,6 +14,7 @@ function SliderCouponOne() {
       };
 
     return (
+        <Link to="/Discount-daily" className="link-item">
             <div className="sliderCouponOne">
                 <div className="slider-title">
                     <div className="title-left">
@@ -19,7 +22,7 @@ function SliderCouponOne() {
                     <span>Thương Hiệu Chính Hãng</span>
                     </div>
                     <div className="title-right">
-                    <a href="#">XEM THÊM</a>
+                    <a href="true">XEM THÊM</a>
                     </div>
                 </div>
                 <div className="layout-coupon">
@@ -45,7 +48,7 @@ function SliderCouponOne() {
                 </Slider>
                 </div>
             </div>
-
+        </Link>
     )
 }
 

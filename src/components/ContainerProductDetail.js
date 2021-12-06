@@ -1,47 +1,50 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function ContainerProductDetail() {
 
-    // const images = document.querySelectorAll(".list-image img");
-    // images.forEach((el) => el.addEventListener("click", handleChangeImage));
-    // function handleChangeImage(e) {
-    //   const source = e.target.getAttribute("src");
-    //   const featureImage = document.querySelector(".feature-image");
-    //   featureImage.setAttribute("src", source);
-    // }
+  window.addEventListener('DOMContentLoaded', () => {
+    
+  const images = document.querySelectorAll(".list-image img");
+  images.forEach((el) => el.addEventListener("click", handleChangeImage));
+  function handleChangeImage(e) {
+    const source = e.target.getAttribute("src");
+    const featureImage = document.querySelector(".feature-image");
+    featureImage.setAttribute("src", source);
+  };
+  
+  //zoom image =>> failed only router not render
+    const cover = document.querySelector(".screen-image__cover");
+    cover.addEventListener("mousemove", function (e) {
+      const screenImage = document.querySelector(".feature");
+      const image = document.querySelector(".feature-image");
+      image.style = "width: auto;height:auto;max-height:unset";
 
+      let imageWidth = image.offsetWidth;
+      let imageHeight = image.offsetHeight;
+      const screenWidth = screenImage.offsetWidth;
+      const screenHeight = screenImage.offsetHeight;
+      const spaceX = (imageWidth / 2 - screenWidth) * 2;
+      const spaceY = (imageHeight / 2 - screenHeight) * 2;
+      imageWidth = imageWidth + spaceX;
+      imageHeight = imageHeight + spaceY;
 
-    // const cover = document.querySelector(".screen-image__cover");
-    // cover.addEventListener("mousemove", function (e) {
-    //   const screenImage = document.querySelector(".feature");
-    //   const image = document.querySelector(".feature-image");
-    //   image.style = "width: auto;height:auto;max-height:unset";
+      let x =
+        e.pageX - screenImage.offsetParent?.offsetLeft - screenImage.offsetLeft;
+      let y = e.pageY - screenImage.offsetParent?.offsetTop - screenImage.offsetTop;
 
-    //   let imageWidth = image.offsetWidth;
-    //   let imageHeight = image.offsetHeight;
-    //   const screenWidth = screenImage.offsetWidth;
-    //   const screenHeight = screenImage.offsetHeight;
-    //   const spaceX = (imageWidth / 2 - screenWidth) * 2;
-    //   const spaceY = (imageHeight / 2 - screenHeight) * 2;
-    //   imageWidth = imageWidth + spaceX;
-    //   imageHeight = imageHeight + spaceY;
+      const positionX = (imageWidth / screenWidth / 2) * x;
+      const positionY = (imageHeight / screenHeight / 2) * y;
 
-    //   let x =
-    //     e.pageX - screenImage.offsetParent?.offsetLeft - screenImage.offsetLeft;
-    //   let y = e.pageY - screenImage.offsetParent?.offsetTop - screenImage.offsetTop;
+      image.style = `left: ${-positionX}px;top: ${-positionY}px;width: auto;height:auto;max-height:unset;transform:none;`;
+    });
 
-    //   const positionX = (imageWidth / screenWidth / 2) * x;
-    //   const positionY = (imageHeight / screenHeight / 2) * y;
+    cover.addEventListener("mouseleave", function (e) {
+      const image = document.querySelector(".feature-image");
+      image.style = ``;
+    });
 
-    //   image.style = `left: ${-positionX}px;top: ${-positionY}px;width: auto;height:auto;max-height:unset;transform:none;`;
-    // });
-
-    // cover.addEventListener("mouseleave", function (e) {
-    //   const image = document.querySelector(".feature-image");
-    //   image.style = ``;
-    // });
-
-
+  });
     return (
         <div className="containerProductDetail">
           <div className="productDetail-image">
@@ -61,11 +64,11 @@ function ContainerProductDetail() {
             <div className="socialNetwork">
               <div className="socialNetwork-share">
                 <p>Chia Sẻ: </p>
-                <a href><i className="fab fa-facebook-square" style={{color: 'blue'}} /></a>
-                <a href><i className="fab fa-youtube-square" style={{color: 'red'}} /></a>
-                <a href><i className="fab fa-twitter-square" style={{color: 'rgba(76, 0, 255, 0.801)'}} /></a>
-                <a href><i className="fab fa-facebook-messenger" style={{color: 'blue'}} /></a>
-                <a href><i className="fas fa-share-alt-square" /></a>
+                <a href="true"><i className="fab fa-facebook-square" style={{color: 'blue'}} /></a>
+                <a href="true"><i className="fab fa-youtube-square" style={{color: 'red'}} /></a>
+                <a href="true"><i className="fab fa-twitter-square" style={{color: 'rgba(76, 0, 255, 0.801)'}} /></a>
+                <a href="true"><i className="fab fa-facebook-messenger" style={{color: 'blue'}} /></a>
+                <a href="true"><i className="fas fa-share-alt-square" /></a>
               </div>
               <div className="socialNetwork-like">
                 <img src="https://frontend.tikicdn.com/_desktop-next/static/img/pdp_revamp_v2/icons-like.svg" alt="" />
@@ -117,9 +120,11 @@ function ContainerProductDetail() {
                       <img src="https://frontend.tikicdn.com/_desktop-next/static/img/pdp_revamp_v2/icons-add.svg" alt="" />
                     </div>
                     <div className="group-button">
+                      <Link to="/Shopping-cart" className="link-item">
                       <button>Chọn Mua</button>
+                      </Link>
                       <div className="button-chat">
-                        <a href><i className="far fa-comment" style={{color: '#2b08b7'}} /></a>
+                        <a href="true"><i className="far fa-comment" style={{color: '#2b08b7'}} /></a>
                         <span>chat</span>
                       </div>
                     </div>

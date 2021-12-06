@@ -1,7 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function ProductIconTwo() {
     return (
+        <Link to="/Product" class="link-item">
             <div className="productIconTwo">
                 <div className="featuredCategory">
                     <div className="category">
@@ -92,8 +94,8 @@ function ProductIconTwo() {
                     <span>Đồng Hồ Thông Minh</span>
                     </div>
                 </div>
-                </div>
-
+            </div>
+        </Link>
     )
 }
 

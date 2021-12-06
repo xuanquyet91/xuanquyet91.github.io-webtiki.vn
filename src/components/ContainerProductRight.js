@@ -5,6 +5,8 @@ function ContainerProductRight() {
     
     
     return (
+        // <Link to="/Product-item" class="link-item">
+        <a href="http://localhost:3000/Product-item" class="link-item">
         <div className="containerProduct-right">
             <div className="productListTikiSub">
                 <div className="productListTitleSub">
@@ -20,11 +22,9 @@ function ContainerProductRight() {
                 <div className="productListSub-show">
                 <div className="productListTikiSub-item">
                     <div className="productSub-item">
-                    <div className="productSub-picture">
-                    <Link to="/Product-item">
+                    <div className="productSub-picture">                    
                         <img src="https://salt.tikicdn.com/cache/200x200/ts/product/62/da/6a/75c5fbce2db07166d41ef78210bcce3e.png.webp" alt="" />
-                        <img src="https://salt.tikicdn.com/ts/upload/dc/0d/49/ef9dc5d8164bd62b011e54276502b342.png" alt="" />
-                    </Link>
+                        <img src="https://salt.tikicdn.com/ts/upload/dc/0d/49/ef9dc5d8164bd62b011e54276502b342.png" alt="" />          
                     </div>
                     <div className="productSub-content">
                         <div className="productSub-titleItem">
@@ -954,11 +954,16 @@ function ContainerProductRight() {
                 <span>3</span>
                 <span>4</span>
                 <span>5</span>
-                <a href="#" className="ti-angle-right" />
+                <a href="true" className="ti-angle-right" />
                 </div>
             </div>
+            <div className="support-messenger">
+                <i className="far fa-comment"></i>
+                <span>chat</span>
             </div>
-
+        </div>
+        {/* </Link>  */}
+        </a>
     )
 }
 

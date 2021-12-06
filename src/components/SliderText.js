@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -13,6 +14,7 @@ function SliderText() {
         };
 
         return (
+            <Link to="/Product" >
             <div className="slider__header">
                 <Slider {...settings}>
                     <div className="styleCateName">Thịt, rau củ</div>
@@ -42,6 +44,7 @@ function SliderText() {
                     <div className="styleCateName">Máy Ảnh</div>
                 </Slider>
             </div>
+            </Link>
         )
 }
 

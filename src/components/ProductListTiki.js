@@ -1,7 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function ProductListTiki() {
     return (
+        <Link to="/Product" class="link-item">
             <div className="productListTiki">       
                 <div className="productList-show">
                     <div className="productListTiki-item">
@@ -530,8 +532,13 @@ function ProductListTiki() {
                 <div className="productList-extra">
                     <p>Xem Thêm</p>
                 </div>
+                <div className="header__support">
+                     <Link to="/">
+                     <a href="true"> <img src="https://cf.shopee.vn/file/f630b99bef39b0226e962ba7d6750e68" alt="" /></a>
+                     </Link>
                 </div>
-
+            </div>
+        </Link>
     )
 }
 

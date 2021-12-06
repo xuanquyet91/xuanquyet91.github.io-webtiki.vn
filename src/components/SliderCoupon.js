@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from 'react-router-dom';
 
 function SliderCoupon() {
 
@@ -12,6 +13,7 @@ function SliderCoupon() {
       };
 
     return (
+        <Link to="/Discount-daily" className="link-item">
         <div className="couponTiki">
             <div className="sliderCoupon">
             <Slider {...settings}>
@@ -30,10 +32,10 @@ function SliderCoupon() {
             </Slider>
             </div>
             <div className="bookClubCoupon">
-                <img src="https://salt.tikicdn.com/cache/w1080/ts/banner/c7/02/df/5a228d56de58c3d68d168d6c60ba79d9.jpg.webp" alt="" />
+                <img src="https://salt.tikicdn.com/cache/w400/ts/banner/9c/b5/20/330884cb61f225720948408be7d17527.png.webp" alt="" />
             </div>
         </div>
-
+    </Link>
     )
 }
 
