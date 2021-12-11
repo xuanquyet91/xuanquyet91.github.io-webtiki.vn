@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function ContainerProductDetail() {
@@ -45,12 +46,30 @@ function ContainerProductDetail() {
     });
 
   });
+
+  const [count, setCount] = useState(1)
+  const handlerIncrease = () =>{
+    setCount(prev => prev +1)
+    localStorage.setItem('productCount',count)
+  }
+  const handlerDecrease = () =>{
+    setCount(prev => prev -1)
+    localStorage.setItem('productCount',count)
+  }
+
+  const productTitle = localStorage.getItem('productTitle')
+  const productPrice = localStorage.getItem('productPrice')
+  const productImg = localStorage.getItem('productImg')
+
+  
+
+
     return (
         <div className="containerProductDetail">
           <div className="productDetail-image">
             <div className="layout">
               <div className="feature">
-                <img src="https://salt.tikicdn.com/cache/w1200/ts/product/e5/d5/16/a93f3b25e10bd0616908b53da35ac410.jpg" alt="" className="feature-image" />
+                <img src={productImg} alt="" className="feature-image" />
                 <div className="screen-image__cover" />
               </div>
               <div className="list-image">
@@ -78,7 +97,7 @@ function ContainerProductDetail() {
           </div>
           <div className="productDetail-desc">
             <div className="productDetail-title">
-              <h1>Hộp đựng giấy ăn họa tiết hoa nhí xanh vân men sứ mang phong cách tân cổ điển CB06-HG có 2 ngăn siêu tiện ích</h1>
+              <h1>{productTitle}</h1>
               <div className="productDetail-info">
                 <ion-icon name="star-sharp" style={{color: '#fdd836'}} role="img" className="md hydrated" aria-label="star sharp" />
                 <ion-icon name="star-sharp" style={{color: '#fdd836'}} role="img" className="md hydrated" aria-label="star sharp" />
@@ -92,7 +111,7 @@ function ContainerProductDetail() {
             <div className="productDetail-body">
               <div className="productDetail-left">
                 <div className="product__price">
-                  <h1>750.000 ₫</h1>
+                  <h1>{productPrice } $</h1>
                   <div className="shipPolicy">
                     <img src="https://salt.tikicdn.com/ts/upload/af/84/fc/2037c3b93a81767aed21358ebf3f8b8e.png" alt="" />
                     <p>Miễn phí vận chuyển</p>
@@ -115,9 +134,13 @@ function ContainerProductDetail() {
                   <div className="product-submit">
                     <h4>Số Lượng</h4>
                     <div className="product-count">
-                      <img src="https://frontend.tikicdn.com/_desktop-next/static/img/pdp_revamp_v2/icons-remove.svg" alt="" />
-                      <input type="text" defaultValue={1} />
-                      <img src="https://frontend.tikicdn.com/_desktop-next/static/img/pdp_revamp_v2/icons-add.svg" alt="" />
+                      <img 
+                      onClick={handlerDecrease}
+                      src="https://frontend.tikicdn.com/_desktop-next/static/img/pdp_revamp_v2/icons-remove.svg" alt="" />
+                      <input type="text" Value={count-1} />
+                      <img 
+                      onClick={handlerIncrease}
+                      src="https://frontend.tikicdn.com/_desktop-next/static/img/pdp_revamp_v2/icons-add.svg" alt="" />
                     </div>
                     <div className="group-button">
                       <Link to="/Shopping-cart" className="link-item">

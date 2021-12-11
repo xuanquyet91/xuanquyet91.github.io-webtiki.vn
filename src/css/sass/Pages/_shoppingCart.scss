@@ -108,6 +108,7 @@
                             p:first-child {
                                 font-size: 14px;
                                 font-weight: 600;
+                                padding-right: 10px;
                             }
                             p:nth-child(2) {
                                 font-size: 11px;
@@ -116,17 +117,19 @@
                             }
                             .checkBox-countAdd {
                                 display: inline-block;
-                                width: 200px;
+                                width: 230px;
                                 text-align: center;
                                 input[type="text"] {
-                                    width: 20px;
+                                    width: 22px;
                                     border: 1px solid #dadadf;
-                                    transform: translate(-5px, -7px);
+                                    transform: translate(-9px, -7px);
                                     height: 18px;
                                     text-align: center;
                                 }
                                 img {
                                     border: 1px solid #dadadf;
+                                    transform: translateX(-8px);
+                                    cursor: pointer;
                                 }
                                 img:last-child {
                                     transform: translate(-10px, 0px);
@@ -192,7 +195,7 @@
                     padding-bottom: 10px;
                     p {
                         display: inline-block;
-                        padding: 10px 180px 0 0;
+                        padding: 10px 140px 0 0;
                     }
                 }
                 .priceItem-submitBottom {
@@ -226,5 +229,59 @@
                 cursor: pointer;
             }
         }
+    }
+}
+
+.modal {
+    z-index: 100;
+    background-color: #d9d1d19c;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex !important;
+    .modal-header{
+        padding: 10px 0;
+    }
+    .modal-content {
+        display: flex;
+        flex-direction: column;
+        position: absolute;top: 30%;
+        left: 30%;
+        background-color: white;
+        padding: 20px;}
+    .modal-body {
+        border-bottom: 1px solid #ececec;
+        padding:  25px 0;
+        border-top: 1px solid #ececec;
+        color: #212529;
+    }
+    .modal-title.h4 {
+        font-size: 20px;
+        font-weight: 600;
+        font-family: system-ui;
+    }
+    .setButton{
+        margin-top: 20px;
+        display: flex;
+        // transform: translateX(247%);
+        padding: 5px 30px;
+        color: white;
+        background-color: #0d6efd;
+        border: none;
+        cursor: pointer;
+        border-radius: 3px;
+        font-family: system-ui;
+        font-size: 16px;
+    }
+    button.btn-close{
+        opacity: 0 !important;
+    }
+    .link-item{
+        color: white;
+    }
+    span{
+        color: red;
+        font-weight: 700;
     }
 }

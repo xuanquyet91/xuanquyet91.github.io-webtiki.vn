@@ -1,9 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { useAuth0 } from '@auth0/auth0-react';
+
 
 
 function LoginAndRegister() {
     
+    const { loginWithRedirect, isAuthenticated } = useAuth0();
+
     window.addEventListener('DOMContentLoaded', () => {
     const signUpButton = document.getElementById('signUp');
         const signInButton = document.getElementById('signIn');
@@ -41,7 +45,12 @@ function LoginAndRegister() {
                     <h1>Sign in</h1>
                     <div className="social-container">
                     <a href="#" className="social"><i className="fab fa-facebook-f" /></a>
-                    <a href="#" className="social"><i className="fab fa-google-plus-g" /></a>
+                    {!isAuthenticated && (
+                        <a 
+                        onClick={() => loginWithRedirect()}
+                        href="#" className="social"><i className="fab fa-google-plus-g" />
+                        </a>
+                        )}
                     <a href="#" className="social"><i className="fab fa-apple" /></a>
                     </div>
                     <span>or use your account</span>

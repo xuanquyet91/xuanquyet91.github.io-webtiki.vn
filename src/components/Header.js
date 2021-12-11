@@ -1,7 +1,13 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import { useAuth0 } from '@auth0/auth0-react';
+import JSONPretty from 'react-json-pretty';
+
 
 function Header() {
+  const { user,logout, isAuthenticated } = useAuth0();
+  // const { user, isAuthenticated } = useAuth0();
+
   
     return ( 
         <header className="style__header">
@@ -34,15 +40,31 @@ function Header() {
               <div className="user-account">
               <a href="http://localhost:3000/Register-login">
                 <div className="cart-item">
-                  <img src="https://salt.tikicdn.com/ts/upload/67/de/1e/90e54b0a7a59948dd910ba50954c702e.png" alt="" className="profile-icon" />
+                  {!isAuthenticated && (<img src="https://salt.tikicdn.com/ts/upload/67/de/1e/90e54b0a7a59948dd910ba50954c702e.png" alt="" className="profile-icon" />)}
+                  {isAuthenticated && (<img src={user.picture} alt="" className="profile-icon" />)}
+                  {/* <img src="https://salt.tikicdn.com/ts/upload/67/de/1e/90e54b0a7a59948dd910ba50954c702e.png" alt="" className="profile-icon" /> */}
                   <span className="user-style">
-                  
+                  {!isAuthenticated && (
+                    <div>
                     <span className="user-style__login">Đăng Nhập / Đăng Ký</span>
-                    
                     <span className="account-label">
                       <span>Tài Khoản</span>
                       <img src="https://salt.tikicdn.com/ts/upload/d7/d4/a8/34939af2da1ceeeae9f95b7485784233.png" alt="" />
                     </span>
+                    </div>
+                    )}
+                    {isAuthenticated && (
+                      <>
+                      <Link to="/Account" className="link-item">
+                      <p>{user.email}</p>
+                      </Link>
+                      <button onClick={() => logout()} className="log-out">
+                      Log Out
+                      </button> 
+                      {/* <JSONPretty data={user} /> */}
+                      </>
+                    )}
+                    
                   </span>
                 </div>
                 </a>

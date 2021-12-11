@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 function BannerSaleOne() {
     return (
-        <Link to="/Discount-daily" className="link-item">
+            <Link to="/Discount-daily" className="link-item">
         <div className="bannerSalesOne">
             <div className="bannerLeft">
                 <img src="https://salt.tikicdn.com/cache/w200/ts/banner/87/32/a1/91de71f8f7c68c470753efc36e565a61.png.webp" alt="" />

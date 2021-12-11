@@ -1,48 +1,63 @@
 import React from 'react'
+import { useState,useEffect,memo } from 'react';
 import { Link } from 'react-router-dom'
+ 
 
 
 function FlashDeal() {
-//     window.addEventListener('DOMContentLoaded', (event) => {
+    const [day, setDay] = useState(31)
+    const [hour, setHour] = useState(12)
+    const [minute, setMinute] = useState(60)
+    const [second, setSecond] = useState(60)
+
+    useEffect(()=>{
+
     
-//     // Set the date we're counting down to
-//     var countDownDate = new Date("Dec 10, 2021 08:00:00").getTime();
-    
+        window.addEventListener('DOMContentLoaded', (event) => {
+        
+        // Set the date we're counting down to
+        var countDownDate = new Date("Dec 15, 2021 08:00:00").getTime();
+        
 
-//     // Update the count down every 1 second
-//     var x = setInterval(function() {
+        // Update the count down every 1 second
+        var x = setInterval(function() {
 
-//         // Get today's date and time
-//         var now = new Date().getTime();
+            // Get today's date and time
+            var now = new Date().getTime();
 
-//         // Find the distance between now and the count down date
-//         var distance = countDownDate - now;
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
 
-//         // Time calculations for days, hours, minutes and seconds
-//         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-//         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-//         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-//         // Output the result in an element with id="demo"
-//         document.getElementById("day").innerHTML = days + " d";
-//         document.getElementById("hour").innerHTML = hours + " h";
-//         document.getElementById("min").innerHTML = minutes + " m";
-//         document.getElementById("sec").innerHTML = seconds + " s";
+            // Output the result in an element with id="demo"
+            // document.getElementById("day").innerHTML = days + " d";
+            // document.getElementById("hour").innerHTML = hours + " h";
+            // document.getElementById("min").innerHTML = minutes + " m";
+            // document.getElementById("sec").innerHTML = seconds + " s";
+            setDay(days)
+            setHour(hours)
+            setMinute(minutes)
+            setSecond(seconds)
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                // document.getElementById("hour").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    })
+    // return () => window.removeEventListener('DOMContentLoaded')
 
-//         // If the count down is over, write some text 
-//         if (distance < 0) {
-//             clearInterval(x);
-//             document.getElementById("hour").innerHTML = "EXPIRED";
-//         }
-//     }, 1000);
-
-// });
+},[]);
 
 
     return (
-    <Link to="/Product" class="link-item">
         <div className="flashDeal">
+            <Link to="/Product" class="link-item">
             <div className="flashDeal__header">
                 <div className="flashDeal__toDay">
                 <img src="https://frontend.tikicdn.com/_desktop-next/static/img/giasoc.svg" alt="" />
@@ -50,10 +65,10 @@ function FlashDeal() {
                 <img src="https://frontend.tikicdn.com/_desktop-next/static/img/homnay.svg" alt="" />
                 </div>
                 <div className="countDownTime">
-                <span id="day" /> &nbsp;:
-                <span id="hour" /> &nbsp;:
-                <span id="min" /> &nbsp;:
-                <span id="sec" />
+                <span id="day" >{day}d </span> &nbsp;:
+                <span id="hour">{hour}h </span>  &nbsp;:
+                <span id="min">{minute}m </span>  &nbsp;:
+                <span id="sec">{second}s </span> 
                 </div>
             </div>
             <div className="flashDeal__body">
@@ -142,9 +157,9 @@ function FlashDeal() {
                 </div>
                 </div>
             </div>
+        </Link>
         </div>
-    </Link>
     )
 }
 
-export default FlashDeal
+export default memo(FlashDeal)

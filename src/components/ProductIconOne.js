@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function ProductIconOne() {
     return (
-        <Link to="/Product" class="link-item">
+            <Link to="/Product" class="link-item">
             <div className="productIconOne">
                 <div className="bannerTenCol">
                     <img src="https://salt.tikicdn.com/cache/w100/ts/upload/82/dc/40/2403d7cfe9261d21e0f0e30376360c50.png.webp" alt="" />
@@ -47,6 +47,7 @@ function ProductIconOne() {
                 </div>
             </div>
         </Link>
+
     )
 }
 
